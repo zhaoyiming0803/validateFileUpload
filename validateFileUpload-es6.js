@@ -9,7 +9,6 @@
 	typeof define === 'function' && define.amd ? define(factory) : (global.validateFileUpload = factory());
 })(this, function () {
 	'use strict';
-
 	// 是否是一个function
 	const isFunction = (fn) => {
 		return Object.prototype.toString.call(fn) === '[object Function]' ? fn : function (res) {return res;};
