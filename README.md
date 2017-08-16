@@ -4,6 +4,22 @@ validateFileUpload.js用于文件上传时进行格式、大小等规则校验�
 
 ### 使用说明
 
+### 配置项
+``` javascript
+validateFileUpload({
+		fileType : // 指定允许上传的文件格式，放在数组里，如['jpg', 'jpeg']，如果不校验格式，可以为null。
+		maxSize : 2, // 最大文件大小
+		inptEle : document.querySelector('#file'), // 用于上传文件的input表单
+		showEle : document.querySelector('#img'), // 上传文件成功后是否要显示要页面当中的img，如果不需要，可以为null。
+		success : function (res) {
+			console.log(res); // 校验成功之后的回调函数
+		},
+		error : function (res) {
+			console.log(res); // 校验失败之后的回调函数
+		}
+	});
+```
+
 ### html
 
 ``` html
@@ -61,21 +77,6 @@ validateFileUpload({
 		},
 		error : function (res) {
 			console.log(res);
-		}
-	});
-```
-### 配置项
-``` javascript
-validateFileUpload({
-		fileType : // 指定允许上传的文件格式，放在数组里，如['jpg', 'jpeg']，如果不校验格式，可以为null。
-		maxSize : 2, // 最大文件大小
-		inptEle : document.querySelector('#file'), // 用于上传文件的input表单
-		showEle : document.querySelector('#img'), // 上传文件成功后是否要显示要页面当中的img，如果不需要，可以为null。
-		success : function (res) {
-			console.log(res); // 校验成功之后的回调函数
-		},
-		error : function (res) {
-			console.log(res); // 校验失败之后的回调函数
 		}
 	});
 ```
