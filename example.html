@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name = "format-detection" content="telephone = no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+		<title>Document</title>
+		<meta name="Keywords" content="" />
+		<meta name="Description" content="" />
+	</head>
+	<body>
+		<input type="file" id="file" />
+		<img src="http://www.zymseo.com/images/logo.jpg" alt="图片" id="img" />
+		<button id="btn">按钮</button>
+	</body>
+</html>
+<script type="text/javascript" src="./validateFileUpload-es6.js"></script>
+<script type="text/javascript">
+	document.querySelector('#btn').onclick = function () {
+		validateFileUpload({
+			fileType : ['jpg', 'jpeg', 'png', 'bmp'],
+			maxSize : 2,
+			inptEle : document.querySelector('#file'),
+			showEle : document.querySelector('#img'),
+			success : function (res) {
+				console.log(res);
+			},
+			error : function (res) {
+				console.log(res);
+			}
+		});
+	};
+</script>
