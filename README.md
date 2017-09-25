@@ -9,8 +9,8 @@ validateFileUpload.js用于文件上传时进行格式、大小等规则校验�
 validateFileUpload({
 	fileType : // 指定允许上传的文件格式，放在数组里，如['jpg', 'jpeg']，如果不校验格式，可以为null。
 	maxSize : 2, // 最大文件大小
-	inptEle : '#file', // 用于上传文件的input表单ID
-	showEle : '#img', // 上传文件成功后是否要显示要页面当中的img的ID，如果不需要，可以为null。
+	inptEle : 'file', // 用于上传文件的input表单ID
+	showEle : 'img', // 上传文件成功后是否要显示要页面当中的img的ID，如果不需要，可以为null。
 	success : function (res) {
 		console.log(res); // 校验成功之后的回调函数
 	},
@@ -36,8 +36,8 @@ validateFileUpload({
 	validateFileUpload({
 		fileType : ['jpg', 'jpeg', 'png', 'bmp'],
 		maxSize : 2,
-		inptEle : '#file',
-		showEle : '#img',
+		inptEle : 'file',
+		showEle : 'img',
 		success : function (res) {
 			console.log(res);
 		},
@@ -53,8 +53,8 @@ require(['validateFileUpload'], function (validateFileUpload) {
 	validateFileUpload({
 		fileType : ['jpg', 'jpeg', 'png', 'bmp'],
 		maxSize : 2,
-		inptEle : '#file',
-		showEle : '#img',
+		inptEle : 'file',
+		showEle : 'img',
 		success : function (res) {
 			console.log(res);
 		},
@@ -70,8 +70,8 @@ import validateFileUpload from './validateFileUpload-es6.js';
 validateFileUpload({
 		fileType : ['jpg', 'jpeg', 'png', 'bmp'],
 		maxSize : 2,
-		inptEle : '#file',
-		showEle : '#img',
+		inptEle : 'file',
+		showEle : 'img',
 		success : function (res) {
 			console.log(res);
 		},
