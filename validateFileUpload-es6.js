@@ -1,14 +1,23 @@
 /*
  * Description : 文件上传校验
- * User : zymseo.com
+ * User : zhaoyiming
  * Date : 2017/07/17
+ * License: Apache2.0 ,https://github.com/zymseo/validateFileUpload
 */
 
-;(function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
-	typeof define === 'function' && define.amd ? define(factory) : (global.validateFileUpload = factory());
-})(this, function () {
+;(function (global, oDoc, factory) {
+
+	typeof exports === 'object' && typeof module !== 'undefined'
+	? module.exports = factory(oDoc)
+	: typeof define === 'function' && define.amd
+	? define([], function () {
+		return factory(oDoc);
+	})
+	: (global.validateFileUpload = factory(oDoc));
+
+})(this, document, function (oDoc) {
 	'use strict';
+
 	// 是否是一个function
 	const isFunction = (fn) => {
 		return Object.prototype.toString.call(fn) === '[object Function]' ? fn : function (res) {return res;};
@@ -108,8 +117,8 @@
 
 			this.fileType = fileType ? fileType : null; // 允许上传到文件类型，数组['jpg', 'jpeg', 'png', 'gif', 'bmp', 'docx', 'xls', 'pptx', 'txt', 'mp4', 'mp3']
 			this.maxSize = maxSize ? maxSize  : 100; // 默认允许上传最大2M的文件
-			this.showEle = showEle ? showEle : null; // 默认在html中显示上传文件的dom，一般用于image
-			this.inptEle = inptEle; // 上传文件input表单
+			this.showEle = showEle ? oDoc.querySelector(showEle) : null; // 默认在html中显示上传文件的dom，一般用于image
+			this.inptEle = oDoc.querySelector(inptEle); // 上传文件input表单
 			this.success = isFunction(success); // 成功时回调
 			this.error = isFunction(error); // 错误时回调
 		}
