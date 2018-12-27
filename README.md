@@ -1,6 +1,6 @@
 # validateFileUpload.js插件介绍
 
-validateFileUpload.js用于文件上传时进行格式、大小等规则校验，成功与否都执行回调函数，采用ES6语法，不依赖其他库，可单独运行。
+validateFileUpload.js用于文件上传时进行格式、大小等规则校验，成功与否都执行回调函数，不依赖其他库，可单独运行。
 
 ### 使用说明
 
@@ -68,17 +68,17 @@ require(['validateFileUpload'], function (validateFileUpload) {
 ``` javascript
 import validateFileUpload from './validateFileUpload-es6.js';
 validateFileUpload({
-		fileType : ['jpg', 'jpeg', 'png', 'bmp'],
-		maxSize : 2,
-		inptEle : 'file',
-		showEle : 'img',
-		success : function (res) {
-			console.log(res);
-		},
-		error : function (res) {
-			console.log(res);
-		}
-	});
+	fileType : ['jpg', 'jpeg', 'png', 'bmp'],
+	maxSize : 2,
+	inptEle : 'file',
+	showEle : 'img',
+	success : function (res) {
+		console.log(res);
+	},
+	error : function (res) {
+		console.log(res);
+	}
+});
 ```
 ### validateFileUpload.js可与[@文件上传插件](https://github.com/zymfe/iframeFileUpload)配合使用！
 ### 插件遵循Apache开源许可协议
