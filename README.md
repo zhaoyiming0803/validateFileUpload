@@ -80,7 +80,4 @@ validateFileUpload({
 	}
 });
 ```
-### validateFileUpload.js可与[@文件上传插件](https://github.com/zymfe/iframeFileUpload)配合使用！
-### 插件遵循Apache开源许可协议
-- 博客：[@赵一鸣](http://www.zymseo.com)
-- QQ：1047832475
+### validateFileUpload.js可与[@文件上传插件](https://github.com/zhaoyiming0803/iframeFileUpload)配合使用！
