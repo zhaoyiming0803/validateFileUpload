@@ -2,7 +2,7 @@
  * 文件上传校验
  * @author zhaoyiming
  * @since 2017/07/17
- * License: Apache2.0 ,https://github.com/zymfe/validateFileUpload
+ * License: Apache2.0 ,https://github.com/zhaoyiming0803/validateFileUpload
 */
 
 ; (function (global, oDoc, factory) {
